@@ -10,7 +10,7 @@ Used Sqllite/Web Sql to store chat mesaages on the device.
 
 TODO - 
 
-Storing the chat history in mongodb/CouhDB.
+Storing the chat history in mongodb/CouchDB.
 
 Add Elastic search for searching through messages.
 
