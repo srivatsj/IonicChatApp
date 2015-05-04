@@ -9,6 +9,7 @@ Used Redis store to maintain list of users and chat messages.
 Used Sqllite/Web Sql to store chat mesaages on the device.
 
 TODO - 
+
 Storing the chat history in mongodb/CouhDB.
 
 Add Elastic search for searching through messages.
