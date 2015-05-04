@@ -1,0 +1,60 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+<ion-view cache-view="false">
+    <ion-nav-title>
+        <i class='icon ion-chatbubble user-messages-top-icon'></i> <div class='msg-header-username'>{{fromPhone}}
+        <span ng-show='lastSeen'>Last Seen {{lastSeen}}</span></div>
+    </ion-nav-title>
+
+    <ion-content has-bouncing="true" class="has-header has-footer" ng-controller="ChatDetailCtrl" delegate-handle="myScroll">
+
+        <ion-refresher
+                pulling-text="Pull to refresh..."
+                on-refresh="doRefresh()">
+        </ion-refresher>
+
+        <div ng-repeat="content in data" class="message-wrapper">
+
+                <!--div ng-show="((content.toPhoneNo==fromPhone && content.fromPhoneNo==storage.devicePhoneNo) || (content.fromPhoneNo==fromPhone && content.toPhoneNo==devicePhoneNo))"-->
+
+                            <div ng-if="content.fromPhoneNo==storage.devicePhoneNo">
+
+                                <div class="chat-bubble right">
+
+                                    <div class="message">
+                                        {{content.message}}
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div ng-if="content.fromPhoneNo==fromPhone">
+
+                                <div class="chat-bubble left">
+
+                                    <div class="message">
+                                        {{content.message}}
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="cf"></div>
+
+                </div>
+            <!--/div-->
+    </ion-content>
+    <ion-footer-bar class="bar bar-footer item-input-inset">
+        <label class="item-input-wrapper">
+            <input type="search" placeholder="Comment" ng-model="newComment">
+        </label>
+        <button ng-click="addComment(newComment, fromPhone)" class="button button-clear">
+            Add
+        </button>
+    </ion-footer-bar>
+</ion-view>

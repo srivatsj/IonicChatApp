@@ -1,0 +1,119 @@
+/* Empty. Add your own CSS if you like */
+
+.msg-header-username {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    top: -3px;
+}
+
+.user-messages-top-icon {
+    font-size: 28px;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    top: -3px;
+    right: 5px;
+}
+
+.chat-bubble {
+    border-radius: 5px;
+    display: inline-block;
+    padding: 10px 18px;
+    position: relative;
+    margin: 10px;
+    max-width: 80%;
+}
+
+.chat-bubble:before {
+    content: "\00a0";
+    display: block;
+    height: 16px;
+    width: 9px;
+    position: absolute;
+    bottom: -7.5px;
+}
+
+.chat-bubble.left {
+    background-color: #e6e5eb;
+    float: left;
+    margin-left: 55px;
+}
+
+.chat-bubble.left:before {
+    background-color: #e6e5eb;
+    left: 10px;
+    -webkit-transform: rotate(70deg) skew(5deg);
+}
+
+.chat-bubble.right {
+    background-color: #158ffe;
+    color: #fff;
+    float: right;
+    margin-right: 55px;
+}
+
+.chat-bubble.right:before {
+    background-color: #158ffe;
+    right: 10px;
+    -webkit-transform: rotate(118deg) skew(-5deg);
+}
+
+.message {
+    font-size: 14px;
+}
+
+.message-detail {
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+.message-wrapper {
+    position: relative;
+}
+
+.message-wrapper:last-child {
+    margin-bottom: 10px;
+}
+
+.cf {
+    clear: both !important;
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src:url('../lib/ionic/fonts/icomoon.eot?-s8wcj6');
+    src:url('../lib/ionic/fonts/icomoon.eot?#iefix-s8wcj6') format('embedded-opentype'),
+    url('../lib/ionic/fonts/icomoon.woff?-s8wcj6') format('woff'),
+    url('../lib/ionic/fonts/icomoon.ttf?-s8wcj6') format('truetype'),
+    url('../lib/ionic/fonts/icomoon.svg?-s8wcj6#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-bubble:before {
+    content: "\e96b";
+    color:blue;
+    font-size: x-large;
+}
+
+.icon-bubble2:before {
+    content: "\e96b";
+    color:red;
+    font-size: x-large;
+}
+

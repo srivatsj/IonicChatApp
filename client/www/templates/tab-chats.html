@@ -1,0 +1,41 @@
+<!--ion-view view-title="Chats">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
+        <img ng-src="{{chat.face}}">
+        <h2>{{chat.name}}</h2>
+        <p>{{chat.lastText}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+        <ion-option-button class="button-assertive" ng-click="remove(chat)">
+          Delete
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view-->
+
+<ion-view view-title="Chats">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="val in users" type="item-text-wrap" href="#/tab/chats/{{val.userId}}">
+              <h2>{{val.userId}}</h2>
+
+              <div ng-if="val.unReadMsgCount>0">
+                    <span style="color:red;font-weight:bold;">{{val.messages[val.messages.length-1].message}}</span>
+              </div>
+              <div ng-if="val.unReadMsgCount==0">
+                    <span style="font-weight:bold;">{{val.messages[val.messages.length-1].message}}</span>
+              </div>
+
+          <span ng-if="val.status=='Online'">
+                <i class="icon icon-bubble"><p ng-if="val.unReadMsgCount>0">{{val.unReadMsgCount}}</p></i>
+          </span>
+          <span ng-if="val.status=='Offline'">
+                <i class="icon icon-bubble2"><p ng-if="val.unReadMsgCount>0">{{val.unReadMsgCount}}</p></i>
+          </span>
+
+     </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
