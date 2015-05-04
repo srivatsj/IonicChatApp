@@ -10,8 +10,13 @@ Used Sqllite/Web Sql to store chat mesaages on the device.
 
 TODO - 
 Storing the chat history in mongodb/CouhDB.
+
 Add Elastic search for searching through messages.
+
 Sending notifications to device when not avialable.
+
 Work on UI and test on device, only tested on the browser.
+
 Add cordova code to get contacts from device.
+
 Work on exiting defects.
