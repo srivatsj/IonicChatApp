@@ -12,7 +12,7 @@ TODO -
 
 Storing the chat history in mongodb/CouchDB.
 
-Add Elastic search for searching through messages.
+Add ElasticSearch for searching through messages.
 
 Sending notifications to device when not avialable.
 
@@ -21,3 +21,5 @@ Work on UI and test on device, only tested on the browser.
 Add cordova code to get contacts from device.
 
 Work on exiting defects.
+
+Use Redis or RabbitMQ as pub/sub.
